@@ -6,7 +6,7 @@ export class Template {
   @PrimaryGeneratedColumn()
   id: number;
 
-  @Column()
+  @Column({ nullable: false })
   name: string;
 
   @OneToMany(

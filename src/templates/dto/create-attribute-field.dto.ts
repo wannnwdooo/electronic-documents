@@ -1,7 +1,8 @@
-import { IsString, IsIn } from 'class-validator';
+import { IsString, IsIn, IsNotEmpty } from "class-validator";
 
 export class CreateAttributeFieldDto {
   @IsString()
+  @IsNotEmpty()
   name: string;
 
   @IsString()

@@ -6,10 +6,10 @@ export class DocumentField {
   @PrimaryGeneratedColumn()
   id: number;
 
-  @Column()
+  @Column({ nullable: false })
   name: string;
 
-  @Column('text')
+  @Column({ nullable: false, type: 'text' })
   value: string;
 
   @ManyToOne(() => Document, (document) => document.attributeFields, {

@@ -13,7 +13,7 @@ export class Document {
   @PrimaryGeneratedColumn()
   id: number;
 
-  @Column()
+  @Column({ nullable: false })
   name: string;
 
   @ManyToOne(() => Template)
